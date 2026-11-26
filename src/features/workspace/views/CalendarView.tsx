@@ -66,11 +66,11 @@ const EventDialog: React.FC<{
       </button>
 
       <div className="flex items-center gap-2 mb-3">
-        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-indigo-500/15 text-indigo-700 border border-indigo-500/30">
+        <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[var(--accent-soft)] text-[var(--accent)] border border-[var(--accent)]/30">
           Planning calendar
         </span>
         {event.linkedTaskId && (
-          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-emerald-500/15 text-emerald-700 border border-emerald-500/30 flex items-center gap-1">
+          <span className="px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wider bg-[var(--green-soft)] text-[var(--green)] border border-[var(--green)]/30 flex items-center gap-1">
             <Link2 className="w-3 h-3" /> Linked task
           </span>
         )}
@@ -221,7 +221,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
         className={`rounded-md border-l-2 px-1.5 py-1 flex items-start gap-1 ${
           isTask
             ? 'bg-[var(--accent-soft)] border-[var(--accent)]'
-            : 'bg-indigo-500/10 border-indigo-500'
+            : 'bg-[var(--accent-soft)] border-[var(--accent)]'
         }`}
       >
         <button
@@ -238,7 +238,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
             className={`block text-[10px] font-semibold truncate leading-tight ${
               isTask
                 ? 'text-[var(--ink)]'
-                : 'text-indigo-800 dark:text-indigo-200'
+                : 'text-[var(--accent)]'
             }`}
           >
             {title}
@@ -351,7 +351,7 @@ export const CalendarView: React.FC<CalendarViewProps> = ({
           <span className="w-2.5 h-2.5 rounded-sm bg-[var(--accent)]" /> ViDo task
         </span>
         <span className="flex items-center gap-1.5">
-          <span className="w-2.5 h-2.5 rounded-sm bg-indigo-500" /> Calendar event
+          <span className="w-2.5 h-2.5 rounded-sm bg-[var(--accent)]" /> Calendar event
         </span>
         <span className="hidden sm:inline">Select a day to inspect its items.</span>
       </div>

@@ -96,22 +96,22 @@ export const WorkspaceTopBar: React.FC<WorkspaceTopBarProps> = ({
         <div className="flex items-center gap-2.5">
           <h1 className="text-xl font-bold tracking-tight text-[var(--ink)]">{title}</h1>
           {isPreview ? (
-            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-amber-500/15 text-amber-700 border border-amber-500/30 flex items-center gap-1.5 shadow-2xs">
-              <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+            <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-[var(--amber-soft)] text-[var(--amber)] border border-[var(--amber)]/35 flex items-center gap-1.5 shadow-2xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-[var(--amber)] animate-pulse" />
               Interactive Preview
             </span>
           ) : (
             <div className="flex items-center gap-2">
-              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-emerald-500/10 text-emerald-700 border border-emerald-500/20 flex items-center gap-1.5 shadow-2xs">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+              <span className="text-[10px] font-mono font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-[var(--green-soft)] text-[var(--green)] border border-[var(--green)]/30 flex items-center gap-1.5 shadow-2xs">
+                <span className="w-1.5 h-1.5 rounded-full bg-[var(--green)]" />
                 Active
               </span>
               {authMode && authMode !== 'unconfigured' && (
                 <span
                   className={`hidden sm:inline-flex items-center gap-1.5 text-[10px] font-mono px-2 py-0.5 rounded-full border transition-all ${
                     authMode === 'emulator'
-                      ? 'bg-purple-500/10 text-purple-700 border-purple-500/25'
-                      : 'bg-emerald-500/10 text-emerald-700 border-emerald-500/25'
+                      ? 'bg-[var(--amber-soft)] text-[var(--amber)] border-[var(--amber)]/30'
+                      : 'bg-[var(--green-soft)] text-[var(--green)] border-[var(--green)]/30'
                   }`}
                   title={
                     authMode === 'emulator'
@@ -122,8 +122,8 @@ export const WorkspaceTopBar: React.FC<WorkspaceTopBarProps> = ({
                   <span
                     className={`w-1.5 h-1.5 rounded-full ${
                       authMode === 'emulator'
-                        ? 'bg-purple-500'
-                        : 'bg-emerald-500'
+                        ? 'bg-[var(--amber)]'
+                        : 'bg-[var(--green)]'
                     }`}
                   />
                   <span>
@@ -184,7 +184,7 @@ export const WorkspaceTopBar: React.FC<WorkspaceTopBarProps> = ({
           <div
             className={`w-8 h-8 rounded-full font-bold text-xs flex items-center justify-center border shadow-xs ${
               isPreview
-                ? 'bg-amber-500/15 text-amber-800 border-amber-500/30'
+                ? 'bg-[var(--amber-soft)] text-[var(--amber)] border-[var(--amber)]/35'
                 : 'bg-[var(--accent-soft)] text-[var(--accent)] border-[var(--accent)]/30'
             }`}
           >
@@ -196,7 +196,7 @@ export const WorkspaceTopBar: React.FC<WorkspaceTopBarProps> = ({
                 {userName}
               </span>
               {isPreview && (
-                <span className="text-[9px] font-mono font-bold uppercase px-1 py-0.2 rounded bg-amber-100 text-amber-800 border border-amber-200">
+                <span className="text-[9px] font-mono font-bold uppercase px-1 py-0.2 rounded bg-[var(--amber-soft)] text-[var(--amber)] border border-[var(--amber)]/30">
                   Demo
                 </span>
               )}
@@ -213,7 +213,7 @@ export const WorkspaceTopBar: React.FC<WorkspaceTopBarProps> = ({
             type="button"
             onClick={onSignOut}
             aria-label="Sign out"
-            className="p-1.5 rounded-lg border border-[var(--line)] text-[var(--muted)] hover:text-red-600 hover:bg-red-50 hover:border-red-200 transition-colors cursor-pointer shrink-0"
+            className="p-1.5 rounded-lg border border-[var(--line)] text-[var(--muted)] hover:text-[var(--red)] hover:bg-[var(--red-soft)] hover:border-[var(--red)]/30 transition-colors cursor-pointer shrink-0"
             title="Sign out of ViDo"
           >
             <LogOut className="w-4 h-4" />

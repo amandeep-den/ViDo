@@ -32,7 +32,7 @@ const ProgressBar: React.FC<{
   >
     <div
       className={`h-full rounded-full transition-all ${
-        tone === 'emerald' ? 'bg-emerald-500' : 'bg-[var(--accent)]'
+        tone === 'emerald' ? 'bg-[var(--green)]' : 'bg-[var(--accent)]'
       }`}
       style={{ width: `${Math.max(0, Math.min(100, value))}%` }}
     />
@@ -177,7 +177,7 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({
                 {period === 'week' ? 'Weekly task completion' : 'Monthly goal progress'}
               </p>
               {reached && (
-                <span className="text-[9px] font-bold uppercase px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-700 border border-emerald-500/30">
+                <span className="text-[9px] font-bold uppercase px-2 py-0.5 rounded-full bg-[var(--green-soft)] text-[var(--green)] border border-[var(--green)]/30">
                   Target reached
                 </span>
               )}
@@ -290,7 +290,7 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({
                       {dayTasks.length}
                     </span>
                   </div>
-                  <p className="text-[9px] text-emerald-600 mt-1 font-semibold">
+                  <p className="text-[9px] text-[var(--green)] mt-1 font-semibold">
                     {completed} done
                   </p>
                 </div>
