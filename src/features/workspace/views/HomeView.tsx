@@ -37,6 +37,7 @@ export interface HomeViewProps {
   onToggleTask?: (task: SampleTask) => void;
   onNewTaskClick?: () => void;
   onUpdateTask?: (taskId: string, updates: Partial<SampleTask>) => void;
+  categories?: Array<{ id: string; name: string }>;
 }
 
 function getGreeting(now: Date) {

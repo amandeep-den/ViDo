@@ -250,8 +250,8 @@ describe('Workspace Views and Modals', () => {
         </MemoryRouter>
       );
 
-      // Header indicates Tasks view
-      expect(screen.getByRole('heading', { name: /^tasks$/i })).toBeInTheDocument();
+      // Top bar provides persistent workspace context while the view supplies its heading
+      expect(screen.getByRole('banner')).toHaveTextContent('Workspace');
       expect(screen.getByRole('heading', { name: /today's work/i })).toBeInTheDocument();
 
       // Verify persistent demo preview banner and single unmissable back button

@@ -7,6 +7,10 @@ export interface TaskCreateModalProps {
   isOpen: boolean;
   onClose: () => void;
   onCreateTask?: (task: SampleTask) => void;
+  // Accepted for compatibility with the workspace category settings; the
+  // restored early-creation form intentionally keeps its fixed category list.
+  categories?: Array<{ id: string; name: string }>;
+  onAddCategory?: (category: { name: string; color?: string }) => unknown;
 }
 
 export const TaskCreateModal: React.FC<TaskCreateModalProps> = ({
